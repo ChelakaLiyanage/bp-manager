@@ -13,7 +13,7 @@ const BlogCard = (props) => {
                     {description}
                 </Card.Text>
                 <Button variant="primary" onClick={() => props.handleEditClick({show: true, data: props.data, isEdit: true })}>{BloggerHelper.BLOG_CARD.EDIT}</Button>
-                <Button variant="danger">{BloggerHelper.BLOG_CARD.DELETE}</Button>
+                <Button variant="danger" onClick={() => props.handleDeleteClick({show: true, data: props.data })}>{BloggerHelper.BLOG_CARD.DELETE}</Button>
             </Card.Body>
         </Card>
     );
